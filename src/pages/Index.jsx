@@ -5,13 +5,18 @@ import { FaPlus, FaTrash } from "react-icons/fa"; // example - use react-icons/f
 import { useState } from 'react';
 
 const Index = () => {
+  const [role, setRole] = useState('');
+  const [task, setTask] = useState('');
+  const [specifics, setSpecifics] = useState('');
+  const [examples, setExamples] = useState('');
+  const [responseFormat, setResponseFormat] = useState('');
+  const [additionalInfo, setAdditionalInfo] = useState('');
   return (
     <Box maxW="2000px" mx="auto">
       <SimpleGrid columns={2} spacing={10}>
         <Box>
           <Heading as="h3" size="lg" mb={2}>Role</Heading>
-          const [role, setRole] = useState('');
-          <Textarea value={role} onChange={(e) => setRole(e.target.value)} placeholder="Dummy data for Role" />
+          <Textarea value={role} onChange={(e) => setRole(e.target.value)} placeholder="Enter your role" />
           <IconButton
             aria-label="Delete text"
             icon={<FaTrash />}
@@ -23,8 +28,7 @@ const Index = () => {
         </Box>
         <Box>
           <Heading as="h3" size="lg" mb={2}>Task</Heading>
-          const [task, setTask] = useState('');
-          <Textarea value={task} onChange={(e) => setTask(e.target.value)} placeholder="Dummy data for Task" />
+          <Textarea value={task} onChange={(e) => setTask(e.target.value)} placeholder="Describe the task" />
           <IconButton
             aria-label="Delete text"
             icon={<FaTrash />}
@@ -36,8 +40,7 @@ const Index = () => {
         </Box>
         <Box>
           <Heading as="h3" size="lg" mb={2}>Specifics</Heading>
-          const [specifics, setSpecifics] = useState('');
-          <Textarea value={specifics} onChange={(e) => setSpecifics(e.target.value)} placeholder="Dummy data for Specifics" />
+          <Textarea value={specifics} onChange={(e) => setSpecifics(e.target.value)} placeholder="Enter specifics" />
           <IconButton
             aria-label="Delete text"
             icon={<FaTrash />}
@@ -49,8 +52,7 @@ const Index = () => {
         </Box>
         <Box>
           <Heading as="h3" size="lg" mb={2}>Examples</Heading>
-          const [examples, setExamples] = useState('');
-          <Textarea value={examples} onChange={(e) => setExamples(e.target.value)} placeholder="Dummy data for Examples" />
+          <Textarea value={examples} onChange={(e) => setExamples(e.target.value)} placeholder="Provide examples" />
           <IconButton
             aria-label="Delete text"
             icon={<FaTrash />}
@@ -62,8 +64,7 @@ const Index = () => {
         </Box>
         <Box>
           <Heading as="h3" size="lg" mb={2}>Response Format</Heading>
-          const [responseFormat, setResponseFormat] = useState('');
-          <Textarea value={responseFormat} onChange={(e) => setResponseFormat(e.target.value)} placeholder="Dummy data for Response Format" />
+          <Textarea value={responseFormat} onChange={(e) => setResponseFormat(e.target.value)} placeholder="Expected response format" />
           <IconButton
             aria-label="Delete text"
             icon={<FaTrash />}
@@ -75,8 +76,7 @@ const Index = () => {
         </Box>
         <Box>
           <Heading as="h3" size="lg" mb={2}>Additional Info</Heading>
-          const [additionalInfo, setAdditionalInfo] = useState('');
-          <Textarea value={additionalInfo} onChange={(e) => setAdditionalInfo(e.target.value)} placeholder="Dummy data for Additional Info" />
+          <Textarea value={additionalInfo} onChange={(e) => setAdditionalInfo(e.target.value)} placeholder="Any additional information" />
           <IconButton
             aria-label="Delete text"
             icon={<FaTrash />}
